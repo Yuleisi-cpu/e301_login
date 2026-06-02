@@ -62,7 +62,9 @@ class DashboardHandlers {
     handlerFunc: (context, params) {
       final authProvider = Provider.of<AuthProvider>(context!);
       if (authProvider.authStatus == AuthStatus.authenticated) {
-        return ProductsView();
+        return ProductsView(
+  categoria: 'Fertilizantes',
+);
       }else{
         return LoginView();
       }
