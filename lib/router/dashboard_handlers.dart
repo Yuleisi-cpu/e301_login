@@ -13,6 +13,7 @@ import 'package:e301_login/ui/views/products_view.dart';
 import 'package:fluro/fluro.dart';
 import 'package:provider/provider.dart';
 
+//Inicio
 class DashboardHandlers {
   static Handler dashboard = Handler(
     handlerFunc: (context, params) {
@@ -57,14 +58,12 @@ class DashboardHandlers {
       }
     }
   );
-
+//Productos
   static Handler products = Handler(
     handlerFunc: (context, params) {
       final authProvider = Provider.of<AuthProvider>(context!);
       if (authProvider.authStatus == AuthStatus.authenticated) {
-        return ProductsView(
-  categoria: 'Fertilizantes',
-);
+        return ProductsView();
       }else{
         return LoginView();
       }
@@ -114,15 +113,16 @@ class DashboardHandlers {
       }
     }
   );
-
+//Nosotros
   static Handler black = Handler(
-    handlerFunc: (context, params) {
-      final authProvider = Provider.of<AuthProvider>(context!);
-      if (authProvider.authStatus == AuthStatus.authenticated) {
-        return BlackView();
-      }else{
-        return LoginView();
-      }
+  handlerFunc: (context, params) {
+    final authProvider = Provider.of<AuthProvider>(context!);
+
+    if (authProvider.authStatus == AuthStatus.authenticated) {
+      return const NosotrosView();
+    } else {
+      return LoginView();
     }
-  );
+  },
+);
 }
