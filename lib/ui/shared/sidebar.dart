@@ -32,7 +32,7 @@ class Sidebar extends StatelessWidget {
           //Opciones
           MenuItem(text: 'Inicio', icon: Icons.home_outlined, onPressed: ()=> navigateTo(Flurorouter.dashboardRoute)),
           MenuItem(text: 'Nosotros', icon: Icons.groups_outlined, onPressed: ()=> navigateTo(Flurorouter.blackRoute)),
-          MenuItem(text: 'Destacados', icon: Icons.star_outline, onPressed: ()=> navigateTo(Flurorouter.analyticRoute)),
+          MenuItem(text: 'Plagas', icon: Icons.bug_report_outlined, onPressed: ()=> navigateTo(Flurorouter.analyticRoute)),
           MenuItem(text: 'Categorías', icon: Icons.grid_view_outlined, onPressed: ()=> navigateTo(Flurorouter.categoriesRoute)),
           MenuItem(text: 'Productos', icon: Icons.inventory_2_outlined, onPressed: ()=> navigateTo(Flurorouter.productsRoute)),
           MenuItem(text: 'Populares', icon: Icons.local_fire_department_outlined, onPressed: ()=> navigateTo(Flurorouter.discountRoute)),
