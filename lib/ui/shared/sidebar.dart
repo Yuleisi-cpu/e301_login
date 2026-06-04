@@ -42,7 +42,7 @@ class Sidebar extends StatelessWidget {
           TextSeparator(text: 'UI Elements'),
          
           MenuItem(text: 'Galeria', icon: Icons.note_add_outlined, onPressed: ()=> navigateTo(Flurorouter.campaignsRoute)),
-          MenuItem(text: 'Black', icon: Icons.post_add_outlined, onPressed: ()=> navigateTo(Flurorouter.blackRoute)),
+          
           MenuItem(text: 'Salir', icon: Icons.exit_to_app_outlined, onPressed: ()=> Provider.of<AuthProvider>(context, listen: false).logout()),
         ],
       )
