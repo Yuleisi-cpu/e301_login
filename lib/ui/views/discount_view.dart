@@ -1,3 +1,4 @@
+
 import 'package:e301_login/ui/labels/custom_labels.dart';
 import 'package:flutter/material.dart';
 
@@ -8,97 +9,150 @@ class DiscountView extends StatelessWidget {
   Widget build(BuildContext context) {
     final productos = [
       {
-        'nombre': 'Herbicida',
-        'imagen': 'assets/images/herbicida.png',
+        'nombre': 'lumbre',
+        'imagen': 'assets/lumbre.png',
       },
       {
-        'nombre': 'Fungicida',
-        'imagen': 'assets/images/fungicida.png',
+        'nombre': '00-00-15',
+        'imagen': 'assets/00-00-15.jpeg',
       },
       {
-        'nombre': 'Insecticida',
-        'imagen': 'assets/images/insecticida.png',
+        'nombre': 'tlaloc',
+        'imagen': 'assets/tlaloc.jpeg',
       },
       {
-        'nombre': 'Fertilizante',
-        'imagen': 'assets/images/fertilizante.png',
+        'nombre': 'thz',
+        'imagen': 'assets/thz.jpeg',
       },
       {
-        'nombre': 'Glifosato',
-        'imagen': 'assets/images/glifosato.png',
-      },
-      {
-        'nombre': 'Urea',
-        'imagen': 'assets/images/urea.png',
-      },
-      {
-        'nombre': 'Nitrogenado',
-        'imagen': 'assets/images/nitrogenado.png',
-      },
-      {
-        'nombre': 'Potasio',
-        'imagen': 'assets/images/potasio.png',
+        'nombre': 'truper',
+        'imagen': 'assets/truper.jpg',
       },
     ];
 
-    return SingleChildScrollView(
-      padding: const EdgeInsets.all(16),
+    return Container(
+      color: Colors.grey[100],
+      padding: const EdgeInsets.all(20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'Productos Populares',
+            'Galería de Productos',
             style: CustomLabels.h1,
           ),
 
-          const SizedBox(height: 20),
+          const SizedBox(height: 8),
 
-          GridView.builder(
-            shrinkWrap: true,
-            physics: const NeverScrollableScrollPhysics(),
-            itemCount: productos.length,
-            gridDelegate:
-                const SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2,
-              crossAxisSpacing: 15,
-              mainAxisSpacing: 15,
-              childAspectRatio: 0.85,
+          const Text(
+            'Productos agroquímicos destacados',
+            style: TextStyle(
+              color: Colors.grey,
+              fontSize: 16,
             ),
-            itemBuilder: (context, index) {
-              final producto = productos[index];
+          ),
 
-              return Card(
-                elevation: 4,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(15),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.all(10),
+          const SizedBox(height: 25),
+
+          Expanded(
+            child: GridView.builder(
+              itemCount: productos.length,
+              gridDelegate:
+                  const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 3,
+                crossAxisSpacing: 20,
+                mainAxisSpacing: 20,
+                childAspectRatio: 0.78,
+              ),
+              itemBuilder: (context, index) {
+                final producto = productos[index];
+
+                return Container(
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(20),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withValues(alpha: 0.08),
+                        blurRadius: 12,
+                        offset: const Offset(0, 4),
+                      ),
+                    ],
+                  ),
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Expanded(
-                        child: Image.asset(
-                          producto['imagen']!,
-                          fit: BoxFit.contain,
+                        flex: 4,
+                        child: Stack(
+                          children: [
+                            ClipRRect(
+                              borderRadius: const BorderRadius.only(
+                                topLeft: Radius.circular(20),
+                                topRight: Radius.circular(20),
+                              ),
+                              child: Image.asset(
+                                producto['imagen']!,
+                                width: double.infinity,
+                                height: double.infinity,
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+
+                            Positioned(
+                              top: 10,
+                              right: 10,
+                              child: Container(
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 10,
+                                  vertical: 5,
+                                ),
+                                decoration: BoxDecoration(
+                                  color: Colors.green,
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                                child: const Text(
+                                  'Popular',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
                       ),
 
-                      const SizedBox(height: 10),
+                      Expanded(
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 10,
+                            vertical: 8,
+                          ),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                producto['nombre']!,
+                                textAlign: TextAlign.center,
+                                style: const TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
 
-                      Text(
-                        producto['nombre']!,
-                        textAlign: TextAlign.center,
-                        style: const TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 15,
+                              const SizedBox(height: 4),
+
+                            
+                            ],
+                          ),
                         ),
                       ),
                     ],
                   ),
-                ),
-              );
-            },
+                );
+              },
+            ),
           ),
         ],
       ),
