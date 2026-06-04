@@ -9,15 +9,23 @@ class CustomersView extends StatelessWidget {
     final proveedores = [
       {
         'nombre': 'AgroTech',
-        'imagen': 'assets/images/agrotech.png',
+        'imagen': 'assets/agrotech.jpg',
       },
       {
-        'nombre': 'FertiMax',
-        'imagen': 'assets/images/fertimax.png',
+        'nombre': 'Truper',
+        'imagen': 'assets/truper.jpg',
       },
       {
         'nombre': 'AgroVerde',
-        'imagen': 'assets/images/agroverde.png',
+        'imagen': 'assets/agroverde.jpg',
+      },
+      {
+        'nombre': 'Agrobela',
+        'imagen': 'assets/agrobela.jpg',
+      },
+      {
+        'nombre': 'Mezfer',
+        'imagen': 'assets/mezfer.png',
       },
     ];
 
@@ -27,10 +35,11 @@ class CustomersView extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'Proveedores',
-            style: CustomLabels.h1,
-          ),
-
+  'Proveedores',
+  style: CustomLabels.h1?.copyWith(
+    color: Colors.green,
+  ),
+),
           const SizedBox(height: 20),
 
           GridView.builder(
