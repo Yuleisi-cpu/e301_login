@@ -37,7 +37,7 @@ class Sidebar extends StatelessWidget {
           MenuItem(text: 'Productos', icon: Icons.inventory_2_outlined, onPressed: ()=> navigateTo(Flurorouter.productsRoute)),
           MenuItem(text: 'Populares', icon: Icons.local_fire_department_outlined, onPressed: ()=> navigateTo(Flurorouter.discountRoute)),
           MenuItem(text: 'Provedores',icon: Icons.local_shipping_outlined, onPressed: ()=> navigateTo(Flurorouter.costumersRoute)),
-          MenuItem(text: 'Asesorias',icon: Icons.park_outlined, onPressed: ()=> navigateTo(Flurorouter.costumersRoute)),
+          MenuItem(text: 'Asesorias',icon: Icons.park_outlined, onPressed: ()=> navigateTo(Flurorouter.asesoriasRoute)),
           SizedBox(height: 30),
           TextSeparator(text: 'UI Elements'),
          
