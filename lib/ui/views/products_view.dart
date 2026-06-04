@@ -23,10 +23,10 @@ class ProductsView extends StatelessWidget {
             children: [
 
               seccionProductos('Fertilizantes', [
-                {'nombre': 'Lumbrea', 'imagen': 'assets/productos/producto1.png'},
-                {'nombre': '10-60-0', 'imagen': 'assets/productos/producto2.png'},
-                {'nombre': 'Triple 17', 'imagen': 'assets/productos/producto3.png'},
-                {'nombre': 'Urea', 'imagen': 'assets/productos/producto4.png'},
+               {'nombre': 'Grogreen', 'imagen': 'assets/grogreen.jpeg'},
+                {'nombre': '00+00+15', 'imagen': 'assets/00-00-15.jpeg'},
+                {'nombre': 'T16', 'imagen': 'assets/t16.jpeg'},
+                {'nombre': 'Sulfamin', 'imagen': 'assets/sulfa.jpeg'},
               ]),
 
               seccionProductos('Herbicidas', [
@@ -37,37 +37,37 @@ class ProductsView extends StatelessWidget {
               ]),
 
               seccionProductos('Insecticidas', [
-                {'nombre': 'Insecticida A', 'imagen': 'assets/productos/producto1.png'},
-                {'nombre': 'Insecticida B', 'imagen': 'assets/productos/producto2.png'},
-                {'nombre': 'Insecticida C', 'imagen': 'assets/productos/producto3.png'},
-                {'nombre': 'Insecticida D', 'imagen': 'assets/productos/producto4.png'},
+                {'nombre': 'Ciper ql', 'imagen': 'assets/ciper.jpeg'},
+                {'nombre': 'Luger', 'imagen': 'assets/luger.jpeg'},
+                {'nombre': 'Velcron ', 'imagen': 'assets/velcron.jpeg'},
+                {'nombre': 'Lannate', 'imagen': 'assets/lanate.jpeg'},
               ]),
 
               seccionProductos('Fungicidas', [
-                {'nombre': 'Fungicida A', 'imagen': 'assets/productos/producto1.png'},
-                {'nombre': 'Fungicida B', 'imagen': 'assets/productos/producto2.png'},
-                {'nombre': 'Fungicida C', 'imagen': 'assets/productos/producto3.png'},
-                {'nombre': 'Fungicida D', 'imagen': 'assets/productos/producto4.png'},
+                {'nombre': 'Tlaloc', 'imagen': 'assets/tlaloc.jpeg'},
+                {'nombre': 'Captan ', 'imagen': 'assets/captan.jpeg'},
+                {'nombre': 'Prozycar', 'imagen': 'assets/prozy.jpeg'},
+                {'nombre': 'Azoshy', 'imagen': 'assets/azoshy.jpeg'},
               ]),
 
               seccionProductos('Hormonas', [
-                {'nombre': 'Hormona A', 'imagen': 'assets/productos/producto1.png'},
-                {'nombre': 'Hormona B', 'imagen': 'assets/productos/producto2.png'},
-                {'nombre': 'Hormona C', 'imagen': 'assets/productos/producto3.png'},
-                {'nombre': 'Hormona D', 'imagen': 'assets/productos/producto4.png'},
+                {'nombre': 'Maxigrow', 'imagen': 'assets/maxi.jpeg'},
+                {'nombre': 'Citoquim', 'imagen': 'assets/cito.jpeg'},
+                {'nombre': 'Biozyme', 'imagen': 'assets/biozy.jpeg'},
+                {'nombre': 'Thz', 'imagen': 'assets/thz.jpeg'},
               ]),
 
               seccionProductos('Semillas', [
-                {'nombre': 'Semilla A', 'imagen': 'assets/productos/producto1.png'},
-                {'nombre': 'Semilla B', 'imagen': 'assets/productos/producto2.png'},
-                {'nombre': 'Semilla C', 'imagen': 'assets/productos/producto3.png'},
-                {'nombre': 'Semilla D', 'imagen': 'assets/productos/producto4.png'},
+                {'nombre': 'Calabaza', 'imagen': 'assets/calabaza.jpeg'},
+                {'nombre': 'Girasol', 'imagen': 'assets/girasol.jpeg'},
+                {'nombre': 'Silantro', 'imagen': 'assets/silantro.jpeg'},
+                {'nombre': 'Jitomate', 'imagen': 'assets/jitomate.jpeg'},
               ]),
               seccionProductos('Otros', [
-                {'nombre': 'Otros A', 'imagen': 'assets/productos/producto1.png'},
-                {'nombre': 'Otros B', 'imagen': 'assets/productos/producto2.png'},
-                {'nombre': 'Otros C', 'imagen': 'assets/productos/producto3.png'},
-                {'nombre': 'Otros D', 'imagen': 'assets/productos/producto4.png'},
+                {'nombre': 'Guantes', 'imagen': 'assets/guante.jpeg'},
+                {'nombre': 'Machetes', 'imagen': 'assets/machete.jpeg'},
+                {'nombre': 'Hilo de guiro', 'imagen': 'assets/guiro.jpeg'},
+                {'nombre': 'Bomba de fumigar', 'imagen': 'assets/bomba.jpeg'},
               ]),
             ],
           ),
@@ -80,8 +80,10 @@ class ProductsView extends StatelessWidget {
 
     if (categoria == 'Fertilizantes') {
       productos = [
-        {'nombre': 'Lumbrea', 'imagen': 'assets/productos/producto1.png'},
-        {'nombre': '10-60-0', 'imagen': 'assets/productos/producto2.png'},
+        {'nombre': 'Grogreen', 'imagen': 'assets/grogreen.jpeg'},
+                {'nombre': '00+00+15', 'imagen': 'assets/00-00-15.jpeg'},
+                {'nombre': 'T16', 'imagen': 'assets/t16.jpeg'},
+                {'nombre': 'Sulfamin', 'imagen': 'assets/sulfa.jpeg'},
       ];
     } else if (categoria == 'Herbicidas') {
       productos = [
@@ -94,32 +96,42 @@ class ProductsView extends StatelessWidget {
     }
     if (categoria == 'Insecticidas') {
       productos = [
-        {'nombre': 'Lumbrea', 'imagen': 'assets/productos/producto1.png'},
-        {'nombre': '10-60-0', 'imagen': 'assets/productos/producto2.png'},
+        {'nombre': 'Ciper ql', 'imagen': 'assets/ciper.jpeg'},
+                {'nombre': 'Luger', 'imagen': 'assets/luger.jpeg'},
+                {'nombre': 'Velcron ', 'imagen': 'assets/velcron.jpeg'},
+                {'nombre': 'Lannate', 'imagen': 'assets/lanate.jpeg'},
       ];
     }
   if (categoria == 'Fungicidas') {
       productos = [
-        {'nombre': 'Lumbrea', 'imagen': 'assets/productos/producto1.png'},
-        {'nombre': '10-60-0', 'imagen': 'assets/productos/producto2.png'},
+        {'nombre': 'Tlaloc', 'imagen': 'assets/tlaloc.jpeg'},
+                {'nombre': 'Captan ', 'imagen': 'assets/captan.jpeg'},
+                {'nombre': 'Prozycar', 'imagen': 'assets/prozy.jpeg'},
+                {'nombre': 'Azoshy', 'imagen': 'assets/azoshy.jpeg'},
       ];
     }
 if (categoria == 'Hormonas') {
       productos = [
-        {'nombre': 'Lumbrea', 'imagen': 'assets/productos/producto1.png'},
-        {'nombre': '10-60-0', 'imagen': 'assets/productos/producto2.png'},
+        {'nombre': 'Maxigrow', 'imagen': 'assets/maxi.jpeg'},
+                {'nombre': 'Citoquim', 'imagen': 'assets/cito.jpeg'},
+                {'nombre': 'Biozyme', 'imagen': 'assets/biozy.jpeg'},
+                {'nombre': 'Thz', 'imagen': 'assets/thz.jpeg'},
       ];
     }
 if (categoria == 'Semillas') {
       productos = [
-        {'nombre': 'Lumbrea', 'imagen': 'assets/productos/producto1.png'},
-        {'nombre': '10-60-0', 'imagen': 'assets/productos/producto2.png'},
+       {'nombre': 'Calabaza', 'imagen': 'assets/calabaza.jpeg'},
+                {'nombre': 'Girasol', 'imagen': 'assets/girasol.jpeg'},
+                {'nombre': 'Silantro', 'imagen': 'assets/silantro.jpeg'},
+                {'nombre': 'Jitomate', 'imagen': 'assets/jitomate.jpeg'},
       ];
     }
 if (categoria == 'Otros') {
       productos = [
-        {'nombre': 'Lumbrea', 'imagen': 'assets/productos/producto1.png'},
-        {'nombre': '10-60-0', 'imagen': 'assets/productos/producto2.png'},
+        {'nombre': 'Guantes', 'imagen': 'assets/guante.jpeg'},
+                {'nombre': 'Machetes', 'imagen': 'assets/machete.jpeg'},
+                {'nombre': 'Hilo de guiro', 'imagen': 'assets/guiro.jpeg'},
+                {'nombre': 'Bomba de fumigar', 'imagen': 'assets/bomba.jpeg'},
       ];
     }
     return Scaffold(
