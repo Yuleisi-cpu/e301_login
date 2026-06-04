@@ -40,9 +40,8 @@ class Sidebar extends StatelessWidget {
           MenuItem(text: 'Asesorias',icon: Icons.park_outlined, onPressed: ()=> navigateTo(Flurorouter.costumersRoute)),
           SizedBox(height: 30),
           TextSeparator(text: 'UI Elements'),
-          MenuItem(text: 'Icons', icon: Icons.list_alt_outlined, onPressed: ()=> navigateTo(Flurorouter.iconsRoute)),
-          MenuItem(text: 'Marketing', icon: Icons.mark_email_read_outlined, onPressed: ()=> navigateTo(Flurorouter.marketingRoute)),
-          MenuItem(text: 'Campaigns', icon: Icons.note_add_outlined, onPressed: ()=> navigateTo(Flurorouter.campaignsRoute)),
+         
+          MenuItem(text: 'Galeria', icon: Icons.note_add_outlined, onPressed: ()=> navigateTo(Flurorouter.campaignsRoute)),
           MenuItem(text: 'Black', icon: Icons.post_add_outlined, onPressed: ()=> navigateTo(Flurorouter.blackRoute)),
           MenuItem(text: 'Salir', icon: Icons.exit_to_app_outlined, onPressed: ()=> Provider.of<AuthProvider>(context, listen: false).logout()),
         ],
